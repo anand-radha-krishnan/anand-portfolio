@@ -17,7 +17,7 @@ export default function Hero() {
               href="/profile"
               className="text-sm font-semibold leading-6 text-gray-900 arrow"
             >
-              Learn more aboout me{" "}
+              Learn more about me{" "}
               <span aria-hidden="true" className="">
                 <span className="arrow-transform">-&gt;</span>
               </span>
