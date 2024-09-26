@@ -107,3 +107,12 @@ a {
 .zoom-15 {
   zoom: 15%;
 }
+
+.arrow {
+  transition: background 200ms, border 200ms;
+}
+
+.arrow-transform {
+  display: inline-block;
+  transition: transform 200ms;
+}
