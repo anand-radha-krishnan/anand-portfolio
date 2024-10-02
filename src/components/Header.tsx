@@ -12,7 +12,7 @@ import { usePathname } from "next/navigation";
 
 const navigation = [
   { name: "Home", href: "/", current: true },
-  { name: "Profile", href: "/Profile", current: false },
+  { name: "Profile", href: "/profile", current: false },
   { name: "Projects", href: "/projects", current: false },
   { name: "Contact", href: "/contact", current: false },
 ];
@@ -46,7 +46,7 @@ export default function Header() {
                 alt="Your Company"
                 width={50}
                 height={50}
-                src="https://tailwindui.com/img/logos/mark.svg"
+                src="https://tailwindui.com/plus/img/logos/mark.svg"
                 className="h-8 w-auto"
               />
             </div>
