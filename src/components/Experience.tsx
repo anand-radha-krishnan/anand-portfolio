@@ -5,15 +5,14 @@ export default function Experience() {
     <>
       {workExperiences.map((workExperience, index) => {
         return (
-          <>
-            <div className="absolute w-1 h-8 left-40 w-6 animate-pulse">
-              <div className="bg-white shadow rounded h-full"></div>
-            </div>
-            <div
-              className="grid grid-cols-3 max-w-xl mx-auto pb-10 gap-3"
-              key={`work-experience-${index}`}
-            >
-              <div className="row-span-2">{workExperience.timeline}</div>
+          <div className="" key={`work-experience-${index}`}>
+            <div className="grid grid-cols-3 max-w-xl mx-auto pb-10 gap-3">
+              <div className="flex row-span-2">
+                <div className="relative right-2 w-1 h-6 animate-pulse">
+                  <div className="bg-white shadow rounded h-full"></div>
+                </div>
+                {workExperience.timeline}
+              </div>
               <div className="col-span-2">{workExperience.designation}</div>
               <div className="col-span-2 text-gray-400">
                 {workExperience.description.length &&
@@ -29,7 +28,7 @@ export default function Experience() {
                   })}
               </div>
             </div>
-          </>
+          </div>
         );
       })}
     </>
