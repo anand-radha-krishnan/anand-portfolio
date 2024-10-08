@@ -13,7 +13,7 @@
     "designation": "Senior Frontend Developer",
     "description": [
       "Developed reusable components using React and Typescript for 120+ Upper-funnel marketing pages for AT&T.",
-      "Content for the pages were managed in Adobe Experience Manager (AEM 6.4).",
+      "Managed the content for the pages using Adobe Experience Manager (AEM 6.4).",
       "Developed standalone discount forms and integrated them into a hub page.",
       "Led offshore team of 6 developers."
     ]
@@ -23,7 +23,8 @@
     "designation": "Frontend Developer",
     "description": [
       "Integrated SonarQube in CI/CD pipeline to improve code quality, test coverage and reduce security vulnerabilities.",
-      "Developed common components and deployed as npm packages using lerna, rollup.js and Storybook"
+      "Developed common components and deployed as npm packages using lerna, rollup.js and Storybook.",
+      "Designed and implemented a flat CMS structure in Adobe AEM 6.3"
     ]
   },
   {
