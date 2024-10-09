@@ -46,11 +46,11 @@ export default function Header() {
                 alt="Your Company"
                 width={50}
                 height={50}
-                src="https://tailwindui.com/plus/img/logos/mark.svg"
-                className="h-8 w-auto"
+                src="/ARK.png"
+                className="h-16 w-auto rounded"
               />
             </div>
-            <div className="hidden sm:ml-6 sm:block">
+            <div className="hidden sm:ml-6 sm:block content-center">
               <div className="flex space-x-4">
                 {navigation.map((item) => {
                   const isActive = pathname === item.href;
