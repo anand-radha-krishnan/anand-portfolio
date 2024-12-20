@@ -15,7 +15,7 @@
     "@splinetool/runtime": "^1.9.21",
     "@vercel/speed-insights": "^1.0.12",
     "autoprefixer": "^10.4.20",
-    "next": "14.2.10",
+    "next": "14.2.15",
     "postcss": "^8.4.47",
     "react": "^18",
     "react-dom": "^18",
