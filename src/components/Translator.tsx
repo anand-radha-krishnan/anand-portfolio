@@ -1,7 +1,7 @@
 "use client";
 import { useState } from "react";
 import { Textarea } from "@/components/ui/textarea";
-import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group";
+import TranslatorLanguages from "./TranslatorLanguages";
 
 export default function Translator() {
   const [inputText, setInputText] = useState("");
@@ -28,41 +28,13 @@ export default function Translator() {
     setIsLoading(false);
   };
 
-  const languages: any = {
-    spa_Latn: "Spanish",
-    fra_Latn: "French",
-    deu_Latn: "German",
-    kan_Knda: "Kannada",
-    guj_Gujr: "Gujarati",
-    hin_Deva: "Hindi",
-    tel_Telu: "Telugu",
-    mal_Mlym: "Malayalam",
-    tam_Taml: "Tamil",
-    jpn_Jpan: "Japanese",
-  };
-
   return (
     <div className="mb-12">
       <div className="text-center mt-16">
         Please choose the languge you want to translate the text to
       </div>
-      <RadioGroup className="flex justify-around mt-8" defaultValue={language}>
-        {Object.keys(languages).map((lang, index) => {
-          return (
-            <div
-              key={`${lang}_${index}`}
-              className="flex items-center space-x-2"
-            >
-              <RadioGroupItem
-                onClick={(e: any) => setLanguage(e.target.value)}
-                value={lang}
-                id={`lang_${index}`}
-              />
-              <label htmlFor={`lang_${index}`}>{languages[lang]}</label>
-            </div>
-          );
-        })}
-      </RadioGroup>
+
+      <TranslatorLanguages setLanguage={(lang) => setLanguage(lang)} />
 
       <div className="flex justify-around">
         <div className="grid w-full gap-1.5 m-12">
@@ -79,11 +51,13 @@ export default function Translator() {
             rows={10}
           />
         </div>
+
         <div className="grid w-full gap-1.5 m-12">
           <label htmlFor="output-text">Translated text</label>
           <Textarea id="output-text" value={outputText} readOnly rows={10} />
         </div>
       </div>
+
       <div className="text-center">
         <button
           disabled={isLoading}
@@ -96,6 +70,7 @@ export default function Translator() {
         >
           {isLoading ? "Translating..." : "Translate"}
         </button>
+
         {error && (
           <p className="text-red-400 mt-4">Please enter a text to translate</p>
         )}

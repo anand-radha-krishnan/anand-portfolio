@@ -7,50 +7,7 @@ import {
   CardTitle,
 } from "@/components/ui/card";
 import Link from "next/link";
-
-const projects = [
-  {
-    project_title: "AT&T",
-    project_description: "Upper funnel marketing landing pages",
-    project_link: "https://www.att.com",
-    project_name: "AT&T - Upper Funnel",
-    project_details: [
-      {
-        description:
-          "Upper funnel marketing pages for the users to shop available offers and products. Application has more than 200 pages and designed with responsive layout to be used on both mobile and larger devices",
-      },
-      {
-        title: "React, Typescript",
-      },
-    ],
-  },
-  {
-    project_title: "Audi",
-    project_description: "Function on Demand digital shop",
-    project_link: "https://www.audi.de/de/",
-    project_name: "Audi - Function on Demand",
-    project_details: [
-      {
-        description:
-          "E-commerce application for Audi vehicle owners. Designed with Next.js and TypeScript along with Next app router and backend for frontend (bff).",
-      },
-      { title: "Next.js, TypeScript, bff" },
-    ],
-  },
-  {
-    project_title: "Language Translator",
-    project_description: "Translate text to multiple available languages.",
-    project_link: "/language-translator",
-    project_name: "Language Translator",
-    project_details: [
-      {
-        description:
-          "Langauge translator uses open-source Meta NLLB (Natural Langugage Left Behind) API to translate the input text to the desired language.",
-      },
-      { title: "NLLB API, ShadCn, TailwindCss" },
-    ],
-  },
-];
+import projects from "@/static/projects.json";
 
 type CardProps = React.ComponentProps<typeof Card>;
 
