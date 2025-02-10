@@ -12,7 +12,8 @@ export default function Translator() {
 
   const fetchTranslate = async () => {
     if (inputText.length === 0) {
-      return setError(true);
+      setError(true);
+      return;
     }
     setIsLoading(true);
     const response: any = await (
@@ -30,15 +31,13 @@ export default function Translator() {
 
   return (
     <div className="mb-12">
-      <div className="text-center mt-16">
-        Please choose the languge you want to translate the text to
-      </div>
-
       <TranslatorLanguages setLanguage={(lang) => setLanguage(lang)} />
 
       <div className="flex justify-around">
-        <div className="grid w-full gap-1.5 m-12">
-          <label htmlFor="input-text">Input text</label>
+        <div className="grid w-full gap-1.5 md:m-12 m-4">
+          <label htmlFor="input-text">
+            <u>Input text</u>
+          </label>
           <Textarea
             placeholder="Type to translate. Maximum 250 characters."
             id="input-text"
@@ -52,8 +51,10 @@ export default function Translator() {
           />
         </div>
 
-        <div className="grid w-full gap-1.5 m-12">
-          <label htmlFor="output-text">Translated text</label>
+        <div className="grid w-full gap-1.5 md:m-12 m-4">
+          <label htmlFor="output-text">
+            <u>Translated text</u>
+          </label>
           <Textarea id="output-text" value={outputText} readOnly rows={10} />
         </div>
       </div>

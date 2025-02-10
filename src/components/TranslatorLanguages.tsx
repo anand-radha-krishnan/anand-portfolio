@@ -21,19 +21,30 @@ export default function TranslatorLanguages({
   setLanguage,
 }: TranslatorLanguageProps) {
   return (
-    <RadioGroup className="flex justify-around mt-8" defaultValue={"spa_Latn"}>
-      {Object.keys(languages).map((lang, index) => {
-        return (
-          <div key={`${lang}_${index}`} className="flex items-center space-x-2">
-            <RadioGroupItem
-              onClick={(e: any) => setLanguage(e.target.value)}
-              value={lang}
-              id={`lang_${index}`}
-            />
-            <label htmlFor={`lang_${index}`}>{languages[lang]}</label>
-          </div>
-        );
-      })}
-    </RadioGroup>
+    <div>
+      <div className="text-center mt-16">
+        Please choose the languge you want to translate the text to
+      </div>
+      <RadioGroup
+        className="flex flex-wrap justify-center flex-row mt-8  mx-4 my-8"
+        defaultValue={"spa_Latn"}
+      >
+        {Object.keys(languages).map((lang, index) => {
+          return (
+            <div
+              key={`${lang}_${index}`}
+              className=" items-center space-x-2 m-2"
+            >
+              <RadioGroupItem
+                onClick={(e: any) => setLanguage(e.target.value)}
+                value={lang}
+                id={`lang_${index}`}
+              />
+              <label htmlFor={`lang_${index}`}>{languages[lang]}</label>
+            </div>
+          );
+        })}
+      </RadioGroup>
+    </div>
   );
 }
