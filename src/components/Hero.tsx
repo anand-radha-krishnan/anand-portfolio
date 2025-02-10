@@ -15,7 +15,7 @@ export default function Hero() {
           <div className="mt-10 flex items-center justify-center gap-x-6">
             <Link
               href="/profile"
-              className="text-sm font-semibold leading-6 text-gray-900 arrow"
+              className="button text-sm font-semibold leading-6 text-gray-900 arrow"
             >
               Learn more about me{" "}
               <span aria-hidden="true">
