@@ -1,5 +1,17 @@
 [
   {
+    "project_title": "DirecTv",
+    "project_description": "E2E E-commerce Web application",
+    "project_link": "https://www.directv.com/",
+    "project_name": "DirecTv",
+    "project_details": [
+      {
+        "description": "Users can purchase and maintain Satellite TV packages and channels. Application has Buy-flow and account management with paymnet history and promotions section. Cart is maintained with Ngrx."
+      },
+      { "title": "Angular 9, Ngrx store, TypeScript" }
+    ]
+  },
+  {
     "project_title": "AT&T",
     "project_description": "Upper funnel marketing landing pages",
     "project_link": "https://www.att.com",
@@ -9,7 +21,7 @@
         "description": "Upper funnel marketing pages for the users to shop available offers and products. Application has more than 200 pages and designed with responsive layout to be used on both mobile and larger devices"
       },
       {
-        "title": "React, Typescript"
+        "title": "React, Typescript, AEM - CMS"
       }
     ]
   },
@@ -22,7 +34,19 @@
       {
         "description": "E-commerce application for Audi vehicle owners. Designed with Next.js and TypeScript along with Next app router and backend for frontend (bff)."
       },
-      { "title": "Next.js, TypeScript, bff" }
+      { "title": "Next.js, React, Context API, TypeScript, bff" }
+    ]
+  },
+  {
+    "project_title": "Trips to go",
+    "project_description": "Personal project. Users can book trips using the application",
+    "project_link": "https://github.com/anand-radha-krishnan/trips-to-go?tab=readme-ov-file#product-list-page-plp",
+    "project_name": "Trips to go",
+    "project_details": [
+      {
+        "description": "Full stack application using Node.js, MongoDb. Users can view all available trips and successfully book a trip. Payment feature is developed using stripe payments. "
+      },
+      { "title": "Node.js, Express.js, MongoDb, Pug" }
     ]
   },
   {
