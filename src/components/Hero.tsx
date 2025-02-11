@@ -19,7 +19,7 @@ export default function Hero() {
             >
               Learn more about me{" "}
               <span aria-hidden="true">
-                <span className="arrow-transform">-&gt;</span>
+                <span className="arrow-transform">&nbsp;{"-->"}</span>
               </span>
             </Link>
           </div>

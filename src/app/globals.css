@@ -104,7 +104,6 @@ a {
 
 .arrow-transform {
   display: inline-block;
-  transition: transform 200ms;
 }
 
 @layer base {
