@@ -1,0 +1,26 @@
+[
+  {
+    "project_title": "Trips to go",
+    "project_description": "Personal project. Users can book trips using the application",
+    "project_link": "https://github.com/anand-radha-krishnan/trips-to-go?tab=readme-ov-file#product-list-page-plp",
+    "project_name": "Trips to go",
+    "project_details": [
+      {
+        "description": "Full stack application using Node.js, MongoDb. Users can view all available trips and successfully book a trip. Payment feature is developed using stripe payments. "
+      },
+      { "title": "Node.js, Express.js, MongoDb, Pug" }
+    ]
+  },
+  {
+    "project_title": "Language Translator",
+    "project_description": "Translate text to multiple available languages.",
+    "project_link": "/language-translator",
+    "project_name": "Language Translator",
+    "project_details": [
+      {
+        "description": "Langauge translator uses open-source Meta NLLB (Natural Langugage Left Behind) API to translate the input text to the desired language."
+      },
+      { "title": "NLLB API, ShadCn, TailwindCss" }
+    ]
+  }
+]
