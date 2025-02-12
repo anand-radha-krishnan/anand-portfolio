@@ -16,7 +16,7 @@ export default function ProjectCards({
   projects = clientProjects,
   display,
 }: {
-  projects: any[];
+  projects?: any[];
   display?: number;
 }) {
   const clientProjects = display ? projects.slice(0, display) : projects;
