@@ -1,6 +1,8 @@
 "use client";
 
+import Link from "next/link";
 import { motion } from "framer-motion";
+
 import {
   Card,
   CardContent,
@@ -8,10 +10,15 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
-import Link from "next/link";
-import projects from "@/static/client-projects.json";
+import clientProjects from "@/static/client-projects.json";
 
-export default function ProjectCards({ display }: { display?: number }) {
+export default function ProjectCards({
+  projects = clientProjects,
+  display,
+}: {
+  projects: any[];
+  display?: number;
+}) {
   const clientProjects = display ? projects.slice(0, display) : projects;
   return (
     <div className="flex lg:justify-start flex-wrap md:mx-16 mx-2 justify-center">
@@ -60,22 +67,24 @@ export default function ProjectCards({ display }: { display?: number }) {
                       </div>
                     </div>
                     <div>
-                      {clientProject.project_details?.map((detail, index) => (
-                        <div
-                          key={index}
-                          className="mb-4 grid grid-cols-[25px_1fr] items-start pb-4 last:mb-0 last:pb-0"
-                        >
-                          <span />
-                          <div className="space-y-1">
-                            <p className="text-sm font-medium leading-none">
-                              {detail.title}
-                            </p>
-                            <p className="text-sm text-muted-foreground">
-                              {detail.description}
-                            </p>
+                      {clientProject.project_details?.map(
+                        (detail: any, index: number) => (
+                          <div
+                            key={index}
+                            className="mb-4 grid grid-cols-[25px_1fr] items-start pb-4 last:mb-0 last:pb-0"
+                          >
+                            <span />
+                            <div className="space-y-1">
+                              <p className="text-sm font-medium leading-none">
+                                {detail.title}
+                              </p>
+                              <p className="text-sm text-muted-foreground">
+                                {detail.description}
+                              </p>
+                            </div>
                           </div>
-                        </div>
-                      ))}
+                        )
+                      )}
                     </div>
                   </CardContent>
                 </Link>
