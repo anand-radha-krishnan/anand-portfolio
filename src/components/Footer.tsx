@@ -1,6 +1,6 @@
 export default function Footer() {
   return (
-    <footer className="fixed w-full bottom-0 md:h-[75px] h-[100px] bg-white md:flex md:justify-between  items-center">
+    <footer className="md:h-[75px] h-[100px] bg-white md:flex md:justify-between  items-center">
       <div className="px-12 md:pt-0 pt-4 text-center">
         <span className="text-sm font-bold text-gray-900">
           Handcrafted by me ©

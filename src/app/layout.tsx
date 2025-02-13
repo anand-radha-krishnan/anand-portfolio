@@ -30,7 +30,7 @@ export default function RootLayout({
           disableTransitionOnChange
         > */}
         <Header />
-        <div className="pb-24">{children}</div>
+        <div className="min-h-screen">{children}</div>
         <Footer />
         {/* </ThemeProvider> */}
         <SpeedInsights />
