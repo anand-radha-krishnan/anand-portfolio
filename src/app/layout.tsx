@@ -3,7 +3,8 @@ import { Inter } from "next/font/google";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 
 // import { ThemeProvider } from "@/components/ThemeProvider";
-import NavMenu from "@/components/NavMenu";
+import Header from "@/components/Header";
+import Footer from "@/components/Footer";
 
 import "./globals.css";
 
@@ -28,8 +29,9 @@ export default function RootLayout({
           enableSystem
           disableTransitionOnChange
         > */}
-        <NavMenu />
-        {children}
+        <Header />
+        <div className="pb-24">{children}</div>
+        <Footer />
         {/* </ThemeProvider> */}
         <SpeedInsights />
       </body>

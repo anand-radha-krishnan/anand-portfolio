@@ -21,12 +21,12 @@ export default function TranslatorLanguages({
   setLanguage,
 }: TranslatorLanguageProps) {
   return (
-    <div>
+    <>
       <div className="text-center mt-16">
         Please choose the languge you want to translate the text to
       </div>
       <RadioGroup
-        className="flex flex-wrap justify-center flex-row mt-8  mx-4 my-8"
+        className="flex flex-wrap justify-center flex-row mt-8 mx-4 my-8 gap-2"
         defaultValue={"spa_Latn"}
       >
         {Object.keys(languages).map((lang, index) => {
@@ -45,6 +45,6 @@ export default function TranslatorLanguages({
           );
         })}
       </RadioGroup>
-    </div>
+    </>
   );
 }
