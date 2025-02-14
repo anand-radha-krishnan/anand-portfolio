@@ -1,17 +1,17 @@
 [
   {
     "timeline": "May 2022 - Present",
-    "designation": "Senior Frontend Developer",
-    "description": [
-      "Building an e-commerce platform for Audi with Next.js v14 and TypeScript. Frontend caching with React Query. ",
+    "designation": "Senior Frontend Engineer",
+    "descriptions": [
+      "Building an e-commerce platform for Audi with Next.js v14 and TypeScript. Frontend caching with React Query.",
       "Migrated the existing React v18 codebase to Next.js.",
-      "Deployed the application in multiple regions like EMEA, APAC and NA regions with multiple lanugages."
+      "Deployed the application in multiple regions like EMEA, APAC and NA regions with multiple languages."
     ]
   },
   {
     "timeline": "Jan 2021 - Apr 2022",
-    "designation": "Senior Frontend Developer",
-    "description": [
+    "designation": "Senior Frontend Engineer",
+    "descriptions": [
       "Developed reusable components using React and Typescript for 120+ Upper-funnel marketing pages for AT&T.",
       "Managed the content for the pages using Adobe Experience Manager (AEM 6.4).",
       "Developed standalone discount forms and integrated them into a hub page.",
@@ -20,20 +20,20 @@
   },
   {
     "timeline": "Apr 2020 - Dec 2020",
-    "designation": "Frontend Developer",
-    "description": [
+    "designation": "Frontend Engineer",
+    "descriptions": [
       "Integrated SonarQube in CI/CD pipeline to improve code quality, test coverage and reduce security vulnerabilities.",
       "Developed common components and deployed as npm packages using lerna, rollup.js and Storybook.",
-      "Designed and implemented a flat CMS structure in Adobe AEM 6.3"
+      "Designed and implemented a flat CMS structure in Adobe AEM 6.3."
     ]
   },
   {
     "timeline": "May 2018 - Mar 2020",
-    "designation": "Frontend Developer",
-    "description": [
+    "designation": "Frontend Engineer",
+    "descriptions": [
       "Built a Single Page Application for Directv using Angular framework with TypeScript.",
-      "Experimented with feature flags to provide personalized experience for users",
-      "Provided unique experience to users using A/B testing"
+      "Experimented with feature flags to provide personalized experience for users.",
+      "Provided unique experience to users using A/B testing."
     ]
   }
 ]
