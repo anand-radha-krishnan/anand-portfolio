@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 
-// import { ThemeProvider } from "@/components/ThemeProvider";
+import { ThemeProvider } from "@/components/ThemeProvider";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 
@@ -22,17 +22,17 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${inter.className} dark`}>
-        {/* <ThemeProvider
+      <body className={`${inter.className}`}>
+        <ThemeProvider
           attribute="class"
           defaultTheme="dark"
           enableSystem
           disableTransitionOnChange
-        > */}
-        <Header />
-        <div className="min-h-screen">{children}</div>
-        <Footer />
-        {/* </ThemeProvider> */}
+        >
+          <Header />
+          <div className="min-h-screen">{children}</div>
+          <Footer />
+        </ThemeProvider>
         <SpeedInsights />
       </body>
     </html>

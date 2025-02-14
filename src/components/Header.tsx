@@ -4,8 +4,8 @@ import Link from "next/link";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
 import { useTheme } from "next-themes";
-// import { useState } from "react";
-// import { Moon, MoonIcon, Sun } from "lucide-react";
+import { useState, useEffect } from "react";
+import { Moon, Sun } from "lucide-react";
 
 import {
   NavigationMenu,
@@ -23,9 +23,19 @@ const navigation = [
 ];
 
 export default function Header() {
-  // const { theme, setTheme } = useTheme();
-  // const [theming, setThemeing] = useState(null);
+  const { theme, setTheme } = useTheme();
+  const [mounted, setMounted] = useState(false);
   const pathname = usePathname();
+
+  useEffect(() => {
+    setMounted(true);
+  }, []);
+
+  if (!mounted) return null;
+
+  const toggleTheme = () => {
+    setTheme((prevTheme) => (prevTheme === "light" ? "dark" : "light"));
+  };
 
   return (
     <div className="flex flex-wrap md:justify-start md:mx-48 mx-12 justify-center">
@@ -55,29 +65,17 @@ export default function Header() {
           })}
         </NavigationMenuList>
       </NavigationMenu>
-      {/* {theming === "dark" ? (
-        <button
-          onClick={() => {
-            setThemeing("light");
-            setTheme("light");
-          }}
-        >
-          <Sun className="h-[1.2rem] w-[1.2rem] rotate-0 scale-100 transition-all dark:-rotate-90 dark:scale-0" />
-          <Moon className="absolute h-[1.2rem] w-[1.2rem] rotate-90 scale-0 transition-all dark:rotate-0 dark:scale-100" />
+      {theme === "dark" ? (
+        <button onClick={toggleTheme}>
+          <Sun className="h-[1.2rem] w-[1.2rem] rotate-0 scale-100 transition-all " />
           <span className="sr-only">Toggle theme</span>
         </button>
       ) : (
-        <button
-          onClick={() => {
-            setThemeing("dark");
-            setTheme("dark");
-          }}
-        >
-          <Sun className="h-[1.2rem] w-[1.2rem] rotate-0 scale-100 transition-all dark:-rotate-90 dark:scale-0" />
-          <Moon className="absolute h-[1.2rem] w-[1.2rem] rotate-90 scale-0 transition-all dark:rotate-0 dark:scale-100" />
+        <button onClick={toggleTheme}>
+          <Moon className="h-[1.2rem] w-[1.2rem] rotate-0 scale-100 transition-all " />
           <span className="sr-only">Toggle theme</span>
         </button>
-      )} */}
+      )}
     </div>
   );
 }
