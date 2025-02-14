@@ -2,6 +2,7 @@
 
 import { useEffect, useState, useTransition } from "react";
 import { motion, useScroll } from "motion/react";
+import { useTheme } from "next-themes";
 
 import ProjectCards from "@/components/ProjectCards";
 import { Skeleton } from "@/components/ui/skeleton";
@@ -9,6 +10,7 @@ import { Skeleton } from "@/components/ui/skeleton";
 export default function Projects() {
   const { scrollYProgress } = useScroll();
   const [isPending, startTransition] = useTransition();
+  const { theme } = useTheme();
   const [projects, serProjects] = useState({
     clientProjects: [],
     personalProjects: [],
@@ -55,7 +57,9 @@ export default function Projects() {
               height: 10,
               zIndex: 1,
               originX: 0,
-              backgroundColor: "rgb(250, 250, 249)",
+              backgroundColor: `${
+                theme === "dark" ? "rgb(250, 250, 249)" : "rgb(0, 0, 0)"
+              }`,
             }}
           />
           <h1 className="font-bold text-3xl text-center mt-12 mb-4">
