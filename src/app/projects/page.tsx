@@ -11,7 +11,7 @@ export default function Projects() {
   const { scrollYProgress } = useScroll();
   const [isPending, startTransition] = useTransition();
   const { theme } = useTheme();
-  const [projects, serProjects] = useState({
+  const [projects, setProjects] = useState({
     clientProjects: [],
     personalProjects: [],
   });
@@ -23,12 +23,16 @@ export default function Projects() {
   };
 
   useEffect(() => {
-    startTransition(async () => {
-      const clientProjects = await fetchData("client");
-      const personalProjects = await fetchData("personal");
-      serProjects({
-        clientProjects: clientProjects.projects,
-        personalProjects: personalProjects.projects,
+    startTransition(() => {
+      const clientProjects = fetchData("client");
+      const personalProjects = fetchData("personal");
+      Promise.allSettled([clientProjects, personalProjects]).then((results) => {
+        setProjects({
+          clientProjects:
+            results[0].status === "fulfilled" ? results[0].value.projects : [],
+          personalProjects:
+            results[1].status === "fulfilled" ? results[1].value.projects : [],
+        });
       });
     });
   }, []);
