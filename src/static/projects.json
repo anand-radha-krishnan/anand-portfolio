@@ -1,5 +1,6 @@
 [
   {
+    "project_type": "client",
     "project_title": "DirecTv",
     "project_description": "E2E E-commerce Web application",
     "project_link": "https://www.directv.com/",
@@ -12,6 +13,7 @@
     ]
   },
   {
+    "project_type": "client",
     "project_title": "AT&T",
     "project_description": "Upper funnel marketing landing pages",
     "project_link": "https://www.att.com",
@@ -26,6 +28,7 @@
     ]
   },
   {
+    "project_type": "client",
     "project_title": "Audi",
     "project_description": "Function on Demand digital shop",
     "project_link": "https://www.audi.de/de/",
@@ -35,6 +38,32 @@
         "description": "E-commerce application for Audi vehicle owners. Designed with Next.js and TypeScript along with Next app router and backend for frontend (bff)."
       },
       { "title": "Next.js, React, Context API, TypeScript, bff" }
+    ]
+  },
+  {
+    "project_type": "personal",
+    "project_title": "Trips to go",
+    "project_description": "Personal project. Users can book trips using the application",
+    "project_link": "https://github.com/anand-radha-krishnan/trips-to-go?tab=readme-ov-file#product-list-page-plp",
+    "project_name": "Trips to go",
+    "project_details": [
+      {
+        "description": "Full stack application using Node.js, MongoDb. Users can view all available trips and successfully book a trip. Payment feature is developed using stripe payments. "
+      },
+      { "title": "Node.js, Express.js, MongoDb, Pug" }
+    ]
+  },
+  {
+    "project_type": "personal",
+    "project_title": "Language Translator",
+    "project_description": "Translate text to multiple available languages.",
+    "project_link": "/language-translator",
+    "project_name": "Language Translator",
+    "project_details": [
+      {
+        "description": "Langauge translator uses open-source Meta NLLB (Natural Langugage Left Behind) API to translate the input text to the desired language."
+      },
+      { "title": "NLLB API, ShadCn, TailwindCss" }
     ]
   }
 ]

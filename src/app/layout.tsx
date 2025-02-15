@@ -5,6 +5,7 @@ import { SpeedInsights } from "@vercel/speed-insights/next";
 import { ThemeProvider } from "@/components/ThemeProvider";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import QueryProvider from "@/components/QueryProvider";
 
 import "./globals.css";
 
@@ -29,9 +30,11 @@ export default function RootLayout({
           enableSystem
           disableTransitionOnChange
         >
-          <Header />
-          <div className="min-h-screen">{children}</div>
-          <Footer />
+          <QueryProvider>
+            <Header />
+            <div className="min-h-screen">{children}</div>
+            <Footer />
+          </QueryProvider>
         </ThemeProvider>
         <SpeedInsights />
       </body>

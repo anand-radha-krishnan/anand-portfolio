@@ -1,15 +1,14 @@
 import { NextRequest, NextResponse } from "next/server";
-import clientProjects from "@/static/client-projects.json";
-import personalProjects from "@/static/personal-projects.json";
+import dbConnect from "@/lib/db";
+import Project from "@/lib/model";
 
 export async function GET(
   request: NextRequest,
   { params }: { params: Promise<{ type: string }> }
 ) {
-  const projectType = (await params).type;
+  const project_type = (await params).type;
+  await dbConnect();
 
-  if (projectType === "client")
-    return NextResponse.json({ projects: clientProjects });
-  if (projectType === "personal")
-    return NextResponse.json({ projects: personalProjects });
+  const projects = await Project.find({ project_type });
+  return NextResponse.json({ projects });
 }

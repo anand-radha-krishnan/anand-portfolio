@@ -3,7 +3,7 @@ import { useTheme } from "next-themes";
 
 export default function Footer() {
   const { theme } = useTheme();
-  const fillColor = theme === "dark" ? "#000" : "#fff";
+  const fillColor = theme && theme === "light" ? "#fff" : "#000";
   return (
     <footer className="md:h-[75px] h-[100px] dark:bg-white bg-black md:flex md:justify-between items-center">
       <div className="px-12 md:pt-0 pt-4 text-center">
