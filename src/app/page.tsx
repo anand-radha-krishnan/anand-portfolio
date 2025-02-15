@@ -5,8 +5,14 @@ import { motion } from "framer-motion";
 
 import Hero from "@/components/Hero";
 import ProjectCards from "@/components/ProjectCards";
+import useProjects from "@/hooks/useProjects";
+import ProjectSkeleton from "@/components/ProjectSkeleton";
 
 export default function Home() {
+  const {
+    clientProjects,
+    query: { isFetching },
+  } = useProjects();
   return (
     <motion.div
       initial={{ opacity: 0 }}
@@ -17,9 +23,15 @@ export default function Home() {
       <Hero />
 
       <div className="my-12">
-        <h1 className="text-center font-bold text-6xl mb-4">Projects</h1>
         <div className="flex justify-center">
-          <ProjectCards display={3} />
+          {isFetching ? (
+            <ProjectSkeleton />
+          ) : (
+            <div>
+              <h1 className="text-center font-bold text-6xl mb-4">Projects</h1>
+              <ProjectCards projects={clientProjects} display={3} />
+            </div>
+          )}
         </div>
         <div className="text-center m-8">
           <Link href="/projects" className="ext-sm font-semibold leading-6">

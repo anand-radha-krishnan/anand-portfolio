@@ -1,53 +1,25 @@
 "use client";
 
-import { useEffect, useState, useTransition } from "react";
 import { motion, useScroll } from "motion/react";
 import { useTheme } from "next-themes";
 
 import ProjectCards from "@/components/ProjectCards";
-import { Skeleton } from "@/components/ui/skeleton";
+import ProjectSkeleton from "@/components/ProjectSkeleton";
+import useProjects from "@/hooks/useProjects";
 
 export default function Projects() {
   const { scrollYProgress } = useScroll();
-  const [isPending, startTransition] = useTransition();
   const { theme } = useTheme();
-  const [projects, setProjects] = useState({
-    clientProjects: [],
-    personalProjects: [],
-  });
-
-  const fetchData = async (projectType: string) => {
-    const resp = await fetch(`/api/projects/${projectType}`);
-    const data = await resp.json();
-    return data;
-  };
-
-  useEffect(() => {
-    startTransition(() => {
-      const clientProjects = fetchData("client");
-      const personalProjects = fetchData("personal");
-      Promise.allSettled([clientProjects, personalProjects]).then((results) => {
-        setProjects({
-          clientProjects:
-            results[0].status === "fulfilled" ? results[0].value.projects : [],
-          personalProjects:
-            results[1].status === "fulfilled" ? results[1].value.projects : [],
-        });
-      });
-    });
-  }, []);
+  const {
+    clientProjects,
+    personalProjects,
+    query: { isFetching },
+  } = useProjects();
 
   return (
     <div className="m-4 md:m-0 md:mb-12">
-      {isPending ? (
-        <>
-          <Skeleton className="w-[200px] h-[50px] rounded-full mx-auto" />
-          <div className="flex justify-center">
-            <Skeleton className="w-[350px] h-[350px] rounded-full m-12" />
-            <Skeleton className="w-[350px] h-[350px] rounded-full m-12 md:block hidden" />
-            <Skeleton className="w-[350px] h-[350px] rounded-full m-12 md:block hidden" />
-          </div>
-        </>
+      {isFetching ? (
+        <ProjectSkeleton />
       ) : (
         <>
           <motion.div
@@ -69,11 +41,11 @@ export default function Projects() {
           <h1 className="font-bold text-3xl text-center mt-12 mb-4">
             Client Projects
           </h1>
-          <ProjectCards projects={projects.clientProjects} />
+          <ProjectCards projects={clientProjects} />
           <h1 className="font-bold text-3xl text-center mt-12 mb-4">
             Personal Projects
           </h1>
-          <ProjectCards projects={projects.personalProjects} />
+          <ProjectCards projects={personalProjects} />
         </>
       )}
     </div>

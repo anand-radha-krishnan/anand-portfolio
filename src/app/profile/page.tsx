@@ -10,20 +10,23 @@ import {
 export default function Profile() {
   return (
     <div className="m-4 md:m-0">
-      <Popover defaultOpen>
-        <PopoverTrigger className="absolute right-10 h-[1.2rem] w-[1.2rem]">
-          <Lightbulb />
-        </PopoverTrigger>
-        <PopoverContent
-          className="p-2"
-          side="top"
-          updatePositionStrategy="optimized"
-        >
-          Data for this page is fetched from Sanity.io CMS
-        </PopoverContent>
-      </Popover>
-      <div className="mx-auto max-w-xl text-3xl font-bold mt-16 mb-10">
-        Experience
+      <div className="mt-16 mb-10 items-center grid grid-cols-4 max-w-xl mx-auto">
+        <div className="text-3xl font-bold col-span-2">Experience</div>
+        <Popover>
+          <div className="h-[1.2rem] w-[1.2rem] animate-pulse col-span-2 w-full text-right">
+            <PopoverTrigger>
+              <Lightbulb />
+            </PopoverTrigger>
+          </div>
+
+          <PopoverContent
+            className="w-[350px]"
+            side="top"
+            updatePositionStrategy="optimized"
+          >
+            Did you know? Data for this page is fetched from Sanity.io CMS!
+          </PopoverContent>
+        </Popover>
       </div>
       <Experience />
     </div>
