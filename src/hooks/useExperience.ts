@@ -1,8 +1,8 @@
 import { useQuery } from "@tanstack/react-query";
 
-import { ExperienceType } from "@/types/experience";
+import { Experience } from "@/types/experience";
 
-const fetchExperience = async (): Promise<ExperienceType[]> => {
+const fetchExperience = async (): Promise<Experience[]> => {
   const resp = await fetch("/api/experience");
   return await resp.json();
 };
