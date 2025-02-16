@@ -1,4 +1,4 @@
-export interface ExperienceType {
+export interface Experience {
   timeline: string;
   designation: string;
   descriptions: string[];

@@ -1,34 +1,31 @@
-import { Lightbulb } from "lucide-react";
+"use client";
 
 import Experience from "@/components/Experience";
-import {
-  Popover,
-  PopoverContent,
-  PopoverTrigger,
-} from "@/components/ui/popover";
+
+import useExperience from "@/hooks/useExperience";
+import ProfileSkeleton from "@/components/ProfileSkeleton";
+import CustomPopover from "@/components/CustomPopover";
 
 export default function Profile() {
+  const { data: experiences, isFetching } = useExperience();
+
   return (
     <div className="m-4 md:m-0">
-      <div className="mt-16 mb-10 items-center grid grid-cols-4 max-w-xl mx-auto">
-        <div className="text-3xl font-bold col-span-2">Experience</div>
-        <Popover>
-          <div className="h-[1.2rem] w-[1.2rem] animate-pulse col-span-2 w-full text-right">
-            <PopoverTrigger>
-              <Lightbulb />
-            </PopoverTrigger>
+      {isFetching ? (
+        <ProfileSkeleton />
+      ) : (
+        <>
+          <div className="mt-16 mb-10 items-center grid grid-cols-4 max-w-xl mx-auto">
+            <div className="text-3xl font-bold col-span-2">Experience</div>
+            <CustomPopover
+              triggerClass="col-span-2 w-full text-right"
+              content="Did you know? Data for this page is fetched from Sanity.io CMS!"
+            />
           </div>
 
-          <PopoverContent
-            className="w-[350px]"
-            side="top"
-            updatePositionStrategy="optimized"
-          >
-            Did you know? Data for this page is fetched from Sanity.io CMS!
-          </PopoverContent>
-        </Popover>
-      </div>
-      <Experience />
+          <Experience experiences={experiences} />
+        </>
+      )}
     </div>
   );
 }
