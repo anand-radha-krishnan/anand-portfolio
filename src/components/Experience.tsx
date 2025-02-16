@@ -1,30 +1,16 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { useEffect, useState, useTransition } from "react";
 
 import { Skeleton } from "@/components/ui/skeleton";
-import { ExperienceType } from "@/types/experience";
+import useExperience from "@/hooks/useExperience";
 
 export default function Experience() {
-  const [experiences, setExperiences] = useState<ExperienceType[]>([]);
-  const [isPending, startTransition] = useTransition();
-  const fetchApi = async () => {
-    const resp = await fetch("/api/experience");
-    const data = await resp.json();
-    return data;
-  };
-
-  useEffect(() => {
-    startTransition(async () => {
-      const exp: ExperienceType[] = await fetchApi();
-      setExperiences(exp);
-    });
-  }, []);
+  const { data: experiences, isFetching } = useExperience();
 
   return (
     <>
-      {isPending ? (
+      {isFetching ? (
         <div className="grid grid-cols-3 max-w-xl mx-auto pb-10 gap-3">
           <Skeleton className="w-[100px] h-[35px] rounded-full row-span-2" />
           <Skeleton className="w-[250px] h-[35px] rounded-full col-span-2" />
@@ -32,7 +18,8 @@ export default function Experience() {
         </div>
       ) : (
         <>
-          {experiences.length > 0 &&
+          {experiences &&
+            experiences.length > 0 &&
             experiences.map((experience, index) => {
               return (
                 <div className="" key={`work-experience-${index}`}>

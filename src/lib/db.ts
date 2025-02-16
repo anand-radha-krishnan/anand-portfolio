@@ -29,6 +29,7 @@ const dbConnect = async () => {
     };
 
     cached.promise = mongoose.connect(dbUri, opts).then((mongoose) => {
+      console.log("DB connection successfully established...");
       return mongoose;
     });
   }

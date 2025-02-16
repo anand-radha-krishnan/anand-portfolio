@@ -1,6 +1,10 @@
 import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group";
 
-const languages: any = {
+interface Language {
+  [lang: string]: string;
+}
+
+const languages: Language = {
   spa_Latn: "Spanish",
   fra_Latn: "French",
   deu_Latn: "German",

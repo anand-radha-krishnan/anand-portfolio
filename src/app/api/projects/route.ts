@@ -6,5 +6,5 @@ export async function GET() {
   await dbConnect();
 
   const projects = await Project.find({});
-  return NextResponse.json({ projects });
+  return NextResponse.json(projects);
 }

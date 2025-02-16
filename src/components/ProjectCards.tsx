@@ -10,12 +10,13 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
+import { Project, ProjectDetails } from "@/types/projects";
 
 export default function ProjectCards({
   projects,
   display,
 }: {
-  projects: any[];
+  projects: Project[];
   display?: number;
 }) {
   const displayProjects = display ? projects.slice(0, display) : projects;
@@ -61,7 +62,7 @@ export default function ProjectCards({
                     </div>
                     <div>
                       {clientProject.project_details?.map(
-                        (detail: any, index: number) => (
+                        (detail: ProjectDetails, index: number) => (
                           <div
                             key={index}
                             className="mb-4 grid grid-cols-[25px_1fr] items-start pb-4 last:mb-0 last:pb-0"
