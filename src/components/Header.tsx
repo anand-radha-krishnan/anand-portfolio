@@ -67,9 +67,7 @@ export default function Header() {
                   className={navigationMenuTriggerStyle}
                   asChild
                 >
-                  <Link href={item.href} passHref>
-                    {item.name}
-                  </Link>
+                  <Link href={item.href}>{item.name}</Link>
                 </NavigationMenuLink>
               </NavigationMenuItem>
             );

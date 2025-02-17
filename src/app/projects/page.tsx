@@ -6,7 +6,7 @@ import { useTheme } from "next-themes";
 import ProjectCards from "@/components/ProjectCards";
 import ProjectSkeleton from "@/components/ProjectSkeleton";
 import useProjects from "@/hooks/useProjects";
-import CustomPopover from "@/components/CustomPopover";
+import CustomDrawer from "@/components/CustomDrawer";
 
 export default function Projects() {
   const { scrollYProgress } = useScroll();
@@ -42,7 +42,7 @@ export default function Projects() {
           <h1 className="font-bold text-3xl text-center mt-12 mb-4">
             Client Projects
           </h1>
-          <CustomPopover
+          <CustomDrawer
             triggerClass="absolute right-10 sm:top-28 top-40"
             content="Projects are fetched from MongoDB and cached with react-query!!"
           />
