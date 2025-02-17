@@ -65,5 +65,18 @@
       },
       { "title": "NLLB API, ShadCn, TailwindCss" }
     ]
+  },
+  {
+    "project_type": "personal",
+    "project_title": "Portfolio",
+    "project_description": "Personal Portfolio Web Application.",
+    "project_link": "https://github.com/anand-radha-krishnan/anand-portfolio",
+    "project_name": "Personal Portfolio",
+    "project_details": [
+      {
+        "description": "Portfolio application showcasing my technical skill-set and expertise in full-stack development. "
+      },
+      { "title": "Next.js, Vercel, TailwindCss, Sanity.io, MongoDB" }
+    ]
   }
 ]

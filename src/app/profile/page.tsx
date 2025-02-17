@@ -4,7 +4,7 @@ import Experience from "@/components/Experience";
 
 import useExperience from "@/hooks/useExperience";
 import ProfileSkeleton from "@/components/ProfileSkeleton";
-import CustomPopover from "@/components/CustomPopover";
+import CustomDrawer from "@/components/CustomDrawer";
 
 export default function Profile() {
   const { data: experiences, isFetching } = useExperience();
@@ -17,9 +17,9 @@ export default function Profile() {
         <>
           <div className="mt-16 mb-10 items-center grid grid-cols-4 max-w-xl mx-auto">
             <div className="text-3xl font-bold col-span-2">Experience</div>
-            <CustomPopover
+            <CustomDrawer
               triggerClass="col-span-2 w-full text-right"
-              content="Did you know? Data for this page is fetched from Sanity.io CMS!"
+              content="Data for this page is fetched from Sanity.io CMS!"
             />
           </div>
 

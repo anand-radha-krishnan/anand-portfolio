@@ -35,7 +35,7 @@ export default function Header() {
   const { theme, setTheme } = useTheme();
   const [mounted, setMounted] = useState(false);
   const pathname = usePathname();
-  const displayMore = false;
+  const displayMore = true;
 
   useEffect(() => {
     setMounted(true);
@@ -67,9 +67,7 @@ export default function Header() {
                   className={navigationMenuTriggerStyle}
                   asChild
                 >
-                  <Link href={item.href} passHref>
-                    {item.name}
-                  </Link>
+                  <Link href={item.href}>{item.name}</Link>
                 </NavigationMenuLink>
               </NavigationMenuItem>
             );
@@ -77,8 +75,8 @@ export default function Header() {
           {displayMore && (
             <NavigationMenuItem>
               <NavigationMenuTrigger>More</NavigationMenuTrigger>
-              <NavigationMenuContent className="">
-                <ul className="grid w-72 gap-3 p-4 md:grid-cols-2  ">
+              <NavigationMenuContent>
+                <ul className="p-4">
                   {components.map((component) => (
                     <NavigationMenuLink key={component.title} asChild>
                       <Link href={component.href} passHref>
