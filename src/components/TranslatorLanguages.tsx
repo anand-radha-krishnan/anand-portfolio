@@ -1,4 +1,4 @@
-import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group";
+import { RadioGroup, RadioGroupItem } from "@/components/common/radio-group";
 
 interface Language {
   [lang: string]: string;

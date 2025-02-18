@@ -9,7 +9,7 @@ import {
   CardDescription,
   CardHeader,
   CardTitle,
-} from "@/components/ui/card";
+} from "@/components/common/card";
 import { Project, ProjectDetails } from "@/types/projects";
 
 export default function ProjectCards({

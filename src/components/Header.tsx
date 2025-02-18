@@ -15,7 +15,7 @@ import {
   NavigationMenuList,
   NavigationMenuTrigger,
   navigationMenuTriggerStyle,
-} from "@/components/ui/navigation-menu";
+} from "@/components/common/navigation-menu";
 
 const navigation = [
   { name: "Home", href: "/", current: true },
