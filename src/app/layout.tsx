@@ -8,6 +8,7 @@ import Footer from "@/components/Footer";
 import QueryProvider from "@/components/QueryProvider";
 
 import "./globals.css";
+import { Dock } from "@/components/Dock/Dock";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -31,8 +32,9 @@ export default function RootLayout({
           disableTransitionOnChange
         >
           <QueryProvider>
-            <Header />
+            {/* <Header /> */}
             <div className="min-h-screen">{children}</div>
+            <Dock />
             <Footer />
           </QueryProvider>
         </ThemeProvider>
