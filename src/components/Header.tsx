@@ -88,7 +88,7 @@ export default function Header() {
               </NavigationMenuContent>
             </NavigationMenuItem>
           )}
-          <div className="w-20 justify-items-center">
+          <div className="w-12 justify-items-center">
             {theme === "dark" ? (
               <>
                 <Sun

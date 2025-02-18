@@ -10,12 +10,12 @@ export default function Profile() {
   const { data: experiences, isFetching } = useExperience();
 
   return (
-    <div className="m-4 md:m-0">
+    <div className="m-4 mt-28">
       {isFetching ? (
         <ProfileSkeleton />
       ) : (
         <>
-          <div className="mt-16 mb-10 items-center grid grid-cols-4 max-w-xl mx-auto">
+          <div className="mt-12 mb-10 items-center grid grid-cols-4 max-w-xl mx-auto">
             <div className="text-3xl font-bold col-span-2">Experience</div>
             <CustomDrawer
               triggerClass="col-span-2 w-full text-right"

@@ -1,5 +1,9 @@
 import ProfileSkeleton from "@/components/ProfileSkeleton";
 
 export default function Loading() {
-  return <ProfileSkeleton />;
+  return (
+    <div className="m-4 md:m-0 md:mb-12 md:mt-28">
+      <ProfileSkeleton />
+    </div>
+  );
 }

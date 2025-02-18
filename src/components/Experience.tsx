@@ -20,40 +20,44 @@ export default function Experience({
                 <motion.div
                   whileInView={{ opacity: 1, x: 0 }}
                   initial={{ opacity: 0, x: -100 }}
-                  transition={{ duration: 0.5 }}
+                  transition={{ duration: 0.4 }}
                   className="flex row-span-2"
                 >
-                  <div className="relative right-2 w-1 h-6 animate-pulse">
-                    <div className="bg-white shadow rounded h-full"></div>
+                  <div className="flex row-span-2 ">
+                    <div className="relative right-2 w-1 h-6 animate-pulse">
+                      <div className="dark:bg-white bg-black shadow rounded h-full"></div>
+                    </div>
+                    {experience.timeline}
                   </div>
-                  {experience.timeline}
                 </motion.div>
 
                 <motion.div
                   whileInView={{ opacity: 1, x: 0 }}
-                  initial={{ opacity: 0, x: 100 }}
-                  transition={{ duration: 0.7 }}
+                  initial={{ opacity: 0, x: -100 }}
+                  transition={{ duration: 0.6 }}
                   className="col-span-2"
                 >
-                  {experience.designation}
+                  <div className="col-span-2">{experience.designation}</div>
                 </motion.div>
                 <motion.div
                   whileInView={{ opacity: 1, x: 0 }}
-                  initial={{ opacity: 0, x: 100 }}
+                  initial={{ opacity: 0, x: -100 }}
                   transition={{ duration: 0.9 }}
                   className="col-span-2 text-gray-400"
                 >
-                  {experience.descriptions.length &&
-                    experience.descriptions.map((desc, index) => {
-                      return (
-                        <ul
-                          className="list-disc pl-4"
-                          key={`work-experience-description-${index}`}
-                        >
-                          <li className="pb-2">{desc}</li>
-                        </ul>
-                      );
-                    })}
+                  <div className="col-span-2 text-gray-400">
+                    {experience.descriptions.length &&
+                      experience.descriptions.map((desc, index) => {
+                        return (
+                          <ul
+                            className="list-disc pl-4"
+                            key={`work-experience-description-${index}`}
+                          >
+                            <li className="pb-2">{desc}</li>
+                          </ul>
+                        );
+                      })}
+                  </div>
                 </motion.div>
               </div>
             </div>

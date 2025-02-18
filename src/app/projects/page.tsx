@@ -18,7 +18,7 @@ export default function Projects() {
   } = useProjects();
 
   return (
-    <div className="m-4 md:m-0 md:mb-12">
+    <div className="mx-4 md:mb-12 mt-28">
       {isFetching ? (
         <ProjectSkeleton />
       ) : (
@@ -39,17 +39,22 @@ export default function Projects() {
               }`,
             }}
           />
-          <h1 className="font-bold text-3xl text-center mt-12 mb-4">
-            Client Projects
-          </h1>
-          <CustomDrawer
-            triggerClass="absolute right-10 sm:top-28 top-40"
-            content="Projects are fetched from MongoDB and cached with react-query!!"
-          />
+          <div className="mt-12 items-baseline grid grid-cols-4 max-w-xl mx-auto">
+            <h1 className="font-bold text-3xl text-center mb-4 col-span-3">
+              Client Projects
+            </h1>
+            <CustomDrawer
+              triggerClass="col-span-1 w-full text-right"
+              content="Projects are fetched from MongoDB and cached with react-query!!"
+            />
+          </div>
           <ProjectCards projects={clientProjects} />
-          <h1 className="font-bold text-3xl text-center mt-12 mb-4">
-            Personal Projects
-          </h1>
+
+          <div className="mt-12 items-baseline grid grid-cols-6 max-w-xl mx-auto">
+            <h1 className="font-bold text-3xl text-center mb-4 col-span-5">
+              Personal Projects
+            </h1>
+          </div>
           <ProjectCards projects={personalProjects} />
         </>
       )}
