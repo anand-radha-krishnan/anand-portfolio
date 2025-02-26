@@ -6,7 +6,7 @@ import { House, Library, FlaskConical, BookOpenText } from "lucide-react";
 import FloatingDockMobile from "./FloatingDockMobile";
 import FloatingDockDesktop from "./FloatingDockDesktop";
 
-export function Dock() {
+export default function Dock() {
   const links = [
     {
       title: "Home",

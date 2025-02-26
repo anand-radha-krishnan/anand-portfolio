@@ -3,12 +3,12 @@ import { Inter } from "next/font/google";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 
 import { ThemeProvider } from "@/components/provider/ThemeProvider";
-import Header from "@/components/Header";
+// import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import QueryProvider from "@/components/provider/QueryProvider";
 
 import "./globals.css";
-import { Dock } from "@/components/dock/Dock";
+import Dock from "@/components/dock/Dock";
 
 const inter = Inter({ subsets: ["latin"] });
 
