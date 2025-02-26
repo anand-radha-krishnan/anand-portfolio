@@ -4,7 +4,7 @@ import { motion, useScroll } from "motion/react";
 import { useTheme } from "next-themes";
 
 import ProjectCards from "@/components/ProjectCards";
-import ProjectSkeleton from "@/components/ProjectSkeleton";
+import ProjectSkeleton from "@/components/skeleton/ProjectSkeleton";
 import useProjects from "@/hooks/useProjects";
 import CustomDrawer from "@/components/CustomDrawer";
 

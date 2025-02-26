@@ -1,4 +1,4 @@
-import Skeleton from "@/components/common/skeleton";
+import Skeleton from "@/components/common/SkeletonComponent";
 
 export default function ProjectSkeleton() {
   return (

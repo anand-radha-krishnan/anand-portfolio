@@ -9,7 +9,7 @@ import {
   DrawerHeader,
   DrawerTitle,
   DrawerTrigger,
-} from "@/components/common/drawer";
+} from "@/components/common/DrawerComponent";
 
 export default function CustomDrawer({
   content,

@@ -1,6 +1,6 @@
 "use client";
 import { useState } from "react";
-import { Textarea } from "@/components/common/textarea";
+import { Textarea } from "@/components/common/TextareaComponent";
 import TranslatorLanguages from "./TranslatorLanguages";
 
 export default function Translator() {

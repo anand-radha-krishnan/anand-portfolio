@@ -3,7 +3,7 @@
 import Experience from "@/components/Experience";
 
 import useExperience from "@/hooks/useExperience";
-import ProfileSkeleton from "@/components/ProfileSkeleton";
+import ProfileSkeleton from "@/components/skeleton/ProfileSkeleton";
 import CustomDrawer from "@/components/CustomDrawer";
 
 export default function Profile() {
