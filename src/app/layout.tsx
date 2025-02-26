@@ -6,9 +6,9 @@ import { ThemeProvider } from "@/components/provider/ThemeProvider";
 // import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import QueryProvider from "@/components/provider/QueryProvider";
+import Dock from "@/components/dock/Dock";
 
 import "./globals.css";
-import Dock from "@/components/dock/Dock";
 
 const inter = Inter({ subsets: ["latin"] });
 
