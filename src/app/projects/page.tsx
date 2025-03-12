@@ -39,22 +39,20 @@ export default function Projects() {
               }`,
             }}
           />
-          <div className="mt-12 items-baseline grid grid-cols-4 max-w-xl mx-auto">
-            <h1 className="font-bold text-3xl text-center mb-4 col-span-3">
+
+          <div className="flex mt-12  items-baseline max-w-6xl mx-auto">
+            <div className="w-full text-3xl font-bold text-center">
               Client Projects
-            </h1>
-            <CustomDrawer
-              triggerClass="col-span-1 w-full text-right"
-              content="Projects are fetched from MongoDB and cached with react-query!!"
-            />
+            </div>
+            <CustomDrawer content="Data for this page is fetched from Sanity.io CMS!" />
           </div>
+
           <ProjectCards projects={clientProjects} />
 
-          <div className="mt-12 items-baseline grid grid-cols-6 max-w-xl mx-auto">
-            <h1 className="font-bold text-3xl text-center mb-4 col-span-5">
-              Personal Projects
-            </h1>
+          <div className="mt-12 text-center font-bold text-3xl">
+            Personal Projects
           </div>
+
           <ProjectCards projects={personalProjects} />
         </>
       )}
