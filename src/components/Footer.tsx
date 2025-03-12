@@ -28,6 +28,7 @@ export default function Footer() {
           </svg>
           <span className="sr-only">GitHub account</span>
         </a>
+
         <a
           href="https://www.linkedin.com/in/anand-radha-krishnan"
           className="text-gray-400 hover:text-gray-900"
@@ -44,6 +45,7 @@ export default function Footer() {
           </svg>
           <span className="sr-only">LinkedIn</span>
         </a>
+
         <a
           href="https://www.pinterest.com/through_my_eyesx/through-my-eyes/"
           className="text-gray-400 hover:text-gray-900"
@@ -60,6 +62,7 @@ export default function Footer() {
           </svg>
           <span className="sr-only">Pinterest</span>
         </a>
+
         <a
           href="https://www.instagram.com/anand.r.krishnan/"
           className="text-gray-400 hover:text-gray-900"

@@ -44,7 +44,7 @@ export default function Projects() {
             <div className="w-full text-3xl font-bold text-center">
               Client Projects
             </div>
-            <CustomDrawer content="Data for this page is fetched from Sanity.io CMS!" />
+            <CustomDrawer content="Projects are fetched from MongoDB and cached with react-query!!" />
           </div>
 
           <ProjectCards projects={clientProjects} />

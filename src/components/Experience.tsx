@@ -27,7 +27,10 @@ export default function Experience({
                     <div className="relative right-2 w-1 h-6 animate-pulse">
                       <div className="dark:bg-white bg-black shadow rounded h-full"></div>
                     </div>
-                    {experience.timeline}
+                    <div>
+                      {experience.timeline}
+                      <div className="pt-2">{experience.organization}</div>
+                    </div>
                   </div>
                 </motion.div>
 
