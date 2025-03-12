@@ -33,7 +33,7 @@ export default function Home() {
             </div>
           )}
         </div>
-        <div className="text-center m-8">
+        <div className="text-center m-8 mt-24">
           <Link href="/projects" className="ext-sm font-semibold leading-6">
             Click here to see more projects
             <span aria-hidden="true">
