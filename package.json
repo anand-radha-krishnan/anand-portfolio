@@ -32,7 +32,7 @@
     "@next/bundle-analyzer": "^15.1.7",
     "@tanstack/react-query-devtools": "^5.66.0",
     "@types/node": "^20",
-    "@types/react": "^18",
+    "@types/react": "^19",
     "@types/react-dom": "^19",
     "autoprefixer": "^10.4.21",
     "eslint": "^8",
