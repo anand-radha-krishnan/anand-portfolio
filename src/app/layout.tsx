@@ -34,7 +34,9 @@ export default function RootLayout({
         >
           <QueryProvider>
             {/* <Header /> */}
-            <div className="min-h-screen">{children}</div>
+            <div className="min-h-screen dark:animated-background dark:bg-gradient-to-tr dark:from-red-50 from-1% dark:to-red-700 to-50%">
+              {children}
+            </div>
             <Dock />
             <Footer />
           </QueryProvider>

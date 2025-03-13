@@ -18,7 +18,7 @@ export default function Projects() {
   } = useProjects();
 
   return (
-    <div className="px-4 md:pb-12 pt-20 dark:animated-background dark:bg-gradient-to-tr dark:from-red-50 from-1% dark:to-red-700 to-50%">
+    <div className="px-4 md:pb-12 pt-20">
       {isFetching ? (
         <ProjectSkeleton />
       ) : (
@@ -44,7 +44,10 @@ export default function Projects() {
             <div className="w-full text-3xl font-bold text-center">
               Client Projects
             </div>
-            <CustomDrawer content="Projects are fetched from MongoDB and cached with react-query!!" />
+            <CustomDrawer
+              content="Projects are fetched from MongoDB and cached with react-query!!"
+              contentClass="dark:animated-background dark:bg-gradient-to-tr dark:from-red-50 from-0% dark:to-red-700 to-40%"
+            />
           </div>
 
           <ProjectCards projects={clientProjects} />

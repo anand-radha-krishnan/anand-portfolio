@@ -181,10 +181,10 @@ a {
 }
 
 .animated-background {
-  background-size: 130%;
+  background-size: 230%;
   -webkit-animation: animation 15s ease-in infinite;
   -moz-animation: animation 15s ease-in infinite;
-  animation: animation 15s ease-out infinite;
+  animation: animation 5 ease-out infinite;
 }
 
 @keyframes animation {

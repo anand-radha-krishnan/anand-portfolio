@@ -14,9 +14,11 @@ import {
 export default function CustomDrawer({
   content,
   triggerClass = "",
+  contentClass = "",
 }: {
   content: string;
   triggerClass?: string;
+  contentClass?: string;
 }) {
   return (
     <Drawer>
@@ -25,7 +27,7 @@ export default function CustomDrawer({
           <Lightbulb />
         </DrawerTrigger>
       </div>
-      <DrawerContent>
+      <DrawerContent className={`${contentClass}`}>
         <DrawerHeader>
           <DrawerTitle>Did you know?</DrawerTitle>
           <DrawerDescription>{content}</DrawerDescription>

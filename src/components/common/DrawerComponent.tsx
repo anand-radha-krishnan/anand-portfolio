@@ -84,7 +84,7 @@ const DrawerDescription = React.forwardRef<
 >(({ className, ...props }, ref) => (
   <DrawerPrimitive.Description
     ref={ref}
-    className={`text-sm text-muted-foreground ${className}`}
+    className={`text-sm ${className}`}
     {...props}
   />
 ));

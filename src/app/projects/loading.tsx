@@ -2,7 +2,7 @@ import ProjectSkeleton from "@/components/skeleton/ProjectSkeleton";
 
 export default function Loading() {
   return (
-    <div className="m-4 md:m-0 md:mb-12 md:mt-28">
+    <div className="p-4 md:p-0 md:pb-12 md:pt-28">
       <ProjectSkeleton />
     </div>
   );

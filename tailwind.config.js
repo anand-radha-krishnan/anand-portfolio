@@ -16,8 +16,7 @@ module.exports = {
         "custom-image": "var(--image-background)",
       },
       colors: {
-        background: "var(--background)",
-        backgroundImage: "var(--image-background)",
+        background: "hsl(var(--background))",
         foreground: "hsl(var(--foreground))",
         card: {
           DEFAULT: "hsl(var(--card))",

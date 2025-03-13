@@ -7,7 +7,12 @@ export default function FloatingDockDesktop({
   items,
   className,
 }: {
-  items: { title: string; icon: React.ReactNode; href: string }[];
+  items: {
+    title: string;
+    icon: React.ReactNode;
+    href: string;
+    display: boolean;
+  }[];
   className?: string;
 }) {
   const mouseX = useMotionValue(Infinity);
@@ -18,9 +23,10 @@ export default function FloatingDockDesktop({
       onMouseLeave={() => mouseX.set(Infinity)}
       className={`mx-auto hidden md:flex h-16 gap-4 items-end rounded-2xl bg-gray-50 dark:bg-neutral-900 px-4 pb-3 ${className}`}
     >
-      {items.map((item) => (
-        <IconContainer mouseX={mouseX} key={item.title} {...item} />
-      ))}
+      {items.map((item) => {
+        if (item.display)
+          return <IconContainer mouseX={mouseX} key={item.title} {...item} />;
+      })}
       <ThemesContainer mouseX={mouseX} />
     </motion.div>
   );
@@ -56,7 +62,7 @@ const ThemesContainer = ({ mouseX }: { mouseX: MotionValue<number> }) => {
           onClick={toggleTheme}
           icon={
             <>
-              <Moon className="h-[1.2rem] w-[1.2rem] rotate-0 scale-100 transition-all " />
+              <Moon />
               <span className="sr-only">Toggle theme</span>
             </>
           }

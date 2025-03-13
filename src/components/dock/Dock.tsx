@@ -14,6 +14,7 @@ export default function Dock() {
         <House className="h-full w-full text-neutral-500 dark:text-neutral-300" />
       ),
       href: `/`,
+      display: true,
     },
     {
       title: "Profile",
@@ -21,6 +22,7 @@ export default function Dock() {
         <BookOpenText className="h-full w-full text-neutral-500 dark:text-neutral-300" />
       ),
       href: "/profile",
+      display: true,
     },
     {
       title: "Projects",
@@ -28,6 +30,7 @@ export default function Dock() {
         <FlaskConical className="h-full w-full text-neutral-500 dark:text-neutral-300" />
       ),
       href: "/projects",
+      display: true,
     },
     {
       title: "Experiments",
@@ -35,6 +38,7 @@ export default function Dock() {
         <Library className="h-full w-full text-neutral-500 dark:text-neutral-300" />
       ),
       href: "/experimentation",
+      display: true,
     },
   ];
 

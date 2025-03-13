@@ -10,7 +10,7 @@ export default function Profile() {
   const { data: experiences, isFetching } = useExperience();
 
   return (
-    <div className="p-4 pt-24 dark:animated-background dark:bg-gradient-to-tr dark:from-red-50 from-1% dark:to-red-700 to-50%">
+    <div className="p-4 pt-24">
       {isFetching ? (
         <ProfileSkeleton />
       ) : (
@@ -19,6 +19,7 @@ export default function Profile() {
             <div className="text-3xl font-bold col-span-2">Experience</div>
             <CustomDrawer
               triggerClass="col-span-2 w-full text-right"
+              contentClass="dark:animated-background dark:bg-gradient-to-tr dark:from-red-50 from-0% dark:to-red-700 to-40%"
               content="Data for this page is fetched from Sanity.io CMS!"
             />
           </div>

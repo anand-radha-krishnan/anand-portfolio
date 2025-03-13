@@ -8,7 +8,12 @@ export default function FloatingDockMobile({
   items,
   className,
 }: {
-  items: { title: string; icon: React.ReactNode; href: string }[];
+  items: {
+    title: string;
+    icon: React.ReactNode;
+    href: string;
+    display: boolean;
+  }[];
   className?: string;
 }) {
   const [open, setOpen] = useState(false);
@@ -26,22 +31,25 @@ export default function FloatingDockMobile({
             layoutId="nav"
             className="absolute top-full mb-2 mt-2 inset-x-0 flex flex-row justify-center gap-2"
           >
-            {items.map((item, idx) => (
-              <Animation
-                key={item.title}
-                index={idx}
-                itemsLength={items.length}
-              >
-                <Link
-                  href={item.href}
-                  key={item.title}
-                  onClick={() => setOpen(!open)}
-                  className="h-10 w-10 rounded-full bg-gray-200 dark:bg-neutral-900 flex items-center justify-center"
-                >
-                  <div className="h-4 w-4">{item.icon}</div>
-                </Link>
-              </Animation>
-            ))}
+            {items.map(
+              (item, idx) =>
+                item.display && (
+                  <Animation
+                    key={item.title}
+                    index={idx}
+                    itemsLength={items.length}
+                  >
+                    <Link
+                      href={item.href}
+                      key={item.title}
+                      onClick={() => setOpen(!open)}
+                      className="h-10 w-10 rounded-full bg-gray-200 dark:bg-neutral-900 flex items-center justify-center"
+                    >
+                      <div className="h-4 w-4">{item.icon}</div>
+                    </Link>
+                  </Animation>
+                )
+            )}
             <Animation
               key={"Toggle themes"}
               index={4}
