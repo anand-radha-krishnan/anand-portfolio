@@ -1,20 +1,28 @@
 "use client";
+import Image from "next/image";
 import { useTheme } from "next-themes";
 
 export default function Footer() {
   const { theme } = useTheme();
-  const fillColor = theme && theme === "light" ? "#fff" : "#000";
+  const fillColor = theme && theme === "dark" ? "#fff" : "#000";
   return (
-    <footer className="md:h-[75px] h-[100px] dark:bg-white bg-black md:flex md:justify-between items-center">
-      <div className="px-12 md:pt-0 pt-4 text-center">
-        <span className="text-sm font-bold dark:text-gray-900 text-white">
-          Handcrafted by me ©
+    <footer className="md:h-[75px] h-[125px] border-t-8 md:flex md:justify-between items-center">
+      <div className="flex px-12 md:pt-0 pt-4 items-center">
+        <Image
+          alt="Anand Radha Krishnan logo"
+          width={50}
+          height={50}
+          src="/ARK.png"
+          className="h-8 w-auto rounded"
+        />
+        <span className="pl-4 text-sm font-bold ">
+          Handcrafted by Anand Radha Krishnan © 2025
         </span>
       </div>
       <div className="flex mt-4 md:mt-0 space-x-5 px-12 justify-center">
         <a
           href="https://github.com/anand-radha-krishnan"
-          className="dark:text-gray-400 text-white hover:text-gray-900"
+          className=" hover:text-gray-900"
           target="_blank"
         >
           <svg

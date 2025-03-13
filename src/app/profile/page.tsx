@@ -10,7 +10,7 @@ export default function Profile() {
   const { data: experiences, isFetching } = useExperience();
 
   return (
-    <div className="m-4 mt-28">
+    <div className="p-4 pt-24 dark:animated-background dark:bg-gradient-to-tr dark:from-red-50 from-1% dark:to-red-700 to-50%">
       {isFetching ? (
         <ProfileSkeleton />
       ) : (

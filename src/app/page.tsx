@@ -22,7 +22,7 @@ export default function Home() {
     >
       <Hero />
 
-      <div className="my-12">
+      <div className="py-12 dark:animated-background dark:bg-gradient-to-tr dark:from-red-700 from-60% dark:to-red-50 to-90%">
         <div className="flex justify-center">
           {isFetching ? (
             <ProjectSkeleton />
@@ -33,7 +33,7 @@ export default function Home() {
             </div>
           )}
         </div>
-        <div className="text-center m-8 mt-24">
+        <div className="text-center m-8 mt-20">
           <Link href="/projects" className="ext-sm font-semibold leading-6">
             Click here to see more projects
             <span aria-hidden="true">

@@ -12,8 +12,12 @@ module.exports = {
         md: "calc(var(--radius) - 2px)",
         sm: "calc(var(--radius) - 4px)",
       },
+      backgroundImage: {
+        "custom-image": "var(--image-background)",
+      },
       colors: {
-        background: "hsl(var(--background))",
+        background: "var(--background)",
+        backgroundImage: "var(--image-background)",
         foreground: "hsl(var(--foreground))",
         card: {
           DEFAULT: "hsl(var(--card))",

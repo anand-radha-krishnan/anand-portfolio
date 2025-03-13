@@ -18,7 +18,7 @@ export default function Projects() {
   } = useProjects();
 
   return (
-    <div className="mx-4 md:mb-12 mt-28">
+    <div className="px-4 md:pb-12 pt-20 dark:animated-background dark:bg-gradient-to-tr dark:from-red-50 from-1% dark:to-red-700 to-50%">
       {isFetching ? (
         <ProjectSkeleton />
       ) : (
