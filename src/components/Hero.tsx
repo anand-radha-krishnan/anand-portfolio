@@ -6,7 +6,7 @@ import { calculateExperience } from "@/lib/utils";
 export default function Hero() {
   const experienceInYears = useMemo(calculateExperience, []);
   return (
-    <div className="border-b-8 dark:animated-background dark:bg-gradient-to-tr dark:from-red-50 from-5% dark:to-red-700 to-50%">
+    <div className="border-b-8 dark:bg-[url(/hero-image-dark.png)] bg-[url(/hero-image-light.png)] bg-contain bg-no-repeat md:bg-[bottom_right_-200px] bg-[center_bottom]">
       <div className="md:mx-auto max-w-2xl py-36 mx-4">
         <div className="text-center">
           <h1 className="font-bold text-6xl">Welcome to the world of Anand</h1>

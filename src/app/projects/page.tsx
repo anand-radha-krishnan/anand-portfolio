@@ -46,7 +46,7 @@ export default function Projects() {
             </div>
             <CustomDrawer
               content="Projects are fetched from MongoDB and cached with react-query!!"
-              contentClass="dark:animated-background dark:bg-gradient-to-tr dark:from-red-50 from-0% dark:to-red-700 to-40%"
+              contentClass="dark:bg-none bg-gradient-to-tr from-red-50 from-0% to-red-700 to-40%"
             />
           </div>
 
