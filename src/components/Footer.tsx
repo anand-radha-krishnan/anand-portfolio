@@ -22,7 +22,7 @@ export default function Footer() {
       <div className="flex mt-4 md:mt-0 space-x-5 px-12 justify-center">
         <a
           href="https://github.com/anand-radha-krishnan"
-          className=" hover:text-gray-900"
+          className="hover:text-gray-900"
           target="_blank"
         >
           <svg

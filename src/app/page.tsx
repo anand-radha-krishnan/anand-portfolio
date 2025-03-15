@@ -23,7 +23,7 @@ export default function Home() {
     >
       <Hero />
 
-      <div className="py-12 dark:md:bg-[url(/home-image-dark.png)] md:bg-[url(/home-image-light.png),_url(/image3_no_background.png)] bg-contain bg-no-repeat dark:bg-[position:right_-500px_top_-70px] bg-[position:left_-200px_top_-150px,_right_-275px_top_-75px]">
+      <div className="py-12 dark:md:bg-[url(/home-image-dark.png)] md:bg-[url(/image3_no_background.png)] md:bg-contain md:bg-no-repeat dark:md:bg-[position:right_-500px_top_-70px] md:bg-[position:right_-275px_top_-75px]">
         <div className="flex justify-center">
           {isFetching ? (
             <ProjectSkeleton />

@@ -14,12 +14,11 @@ export default function Profile() {
       {isFetching ? (
         <ProfileSkeleton />
       ) : (
-        <div className="bg-[url(/profile-image-light.png)] bg-contain bg-no-repeat bg-[top_-200px_right_-100px]">
+        <div className="md:bg-[url(/profile-image-light.png)] md:bg-contain md:bg-no-repeat md:bg-[top_-200px_right_-100px]">
           <div className="mt-12 mb-10 items-center grid grid-cols-4 max-w-xl mx-auto ">
             <div className="text-3xl font-bold col-span-2">Experience</div>
             <CustomDrawer
               triggerClass="col-span-2 w-full text-right"
-              contentClass="dark:bg-none bg-gradient-to-tr from-red-50 from-0% to-red-700 to-40%"
               content="Data for this page is fetched from Sanity.io CMS!"
             />
           </div>

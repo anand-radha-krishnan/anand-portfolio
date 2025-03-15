@@ -22,7 +22,7 @@ export default function Projects() {
       {isFetching ? (
         <ProjectSkeleton />
       ) : (
-        <div className="dark:bg-[url(/project-dark.png)] bg-[url(/project-light.png)] bg-[auto_200px] bg-no-repeat bg-[left_-50px_top_200px]">
+        <div className="dark:md:bg-[url(/project-dark.png),_url(/project-2.png)] md:bg-[url(/project-light.png),_url(/project-2.png)] md:bg-[auto_300px] md:bg-no-repeat md:bg-[position:left_-125px_top_300px,_right_bottom_50px]">
           <motion.div
             id="scroll-indicator"
             style={{
@@ -44,10 +44,7 @@ export default function Projects() {
             <div className="w-full text-3xl font-bold text-center">
               Client Projects
             </div>
-            <CustomDrawer
-              content="Projects are fetched from MongoDB and cached with react-query!!"
-              contentClass="dark:bg-none bg-gradient-to-tr from-red-50 from-0% to-red-700 to-40%"
-            />
+            <CustomDrawer content="Projects are fetched from MongoDB and cached with react-query!!" />
           </div>
 
           <ProjectCards projects={clientProjects} />

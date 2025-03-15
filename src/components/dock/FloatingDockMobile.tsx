@@ -52,7 +52,7 @@ export default function FloatingDockMobile({
             )}
             <Animation
               key={"Toggle themes"}
-              index={4}
+              index={items.length + 1}
               itemsLength={items.length}
             >
               <div className="h-10 w-10 p-2 rounded-full bg-gray-200 dark:bg-neutral-900">

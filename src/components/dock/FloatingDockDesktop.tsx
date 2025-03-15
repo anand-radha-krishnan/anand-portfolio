@@ -45,6 +45,7 @@ const ThemesContainer = ({ mouseX }: { mouseX: MotionValue<number> }) => {
         <IconContainer
           mouseX={mouseX}
           title="Light mode"
+          isLink={false}
           href="#"
           onClick={toggleTheme}
           icon={
@@ -57,8 +58,9 @@ const ThemesContainer = ({ mouseX }: { mouseX: MotionValue<number> }) => {
       ) : (
         <IconContainer
           mouseX={mouseX}
-          title="Dark mode"
+          isLink={false}
           href="#"
+          title="Dark mode"
           onClick={toggleTheme}
           icon={
             <>
