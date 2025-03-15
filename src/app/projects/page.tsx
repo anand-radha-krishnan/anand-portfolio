@@ -22,7 +22,7 @@ export default function Projects() {
       {isFetching ? (
         <ProjectSkeleton />
       ) : (
-        <>
+        <div className="dark:bg-[url(/project-dark.png)] bg-[url(/project-light.png)] bg-[auto_200px] bg-no-repeat bg-[left_-50px_top_200px]">
           <motion.div
             id="scroll-indicator"
             style={{
@@ -57,7 +57,7 @@ export default function Projects() {
           </div>
 
           <ProjectCards projects={personalProjects} />
-        </>
+        </div>
       )}
     </div>
   );

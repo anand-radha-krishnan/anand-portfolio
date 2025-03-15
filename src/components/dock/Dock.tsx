@@ -38,7 +38,7 @@ export default function Dock() {
         <Library className="h-full w-full text-neutral-500 dark:text-neutral-300" />
       ),
       href: "/experimentation",
-      display: true,
+      display: false,
     },
   ];
 

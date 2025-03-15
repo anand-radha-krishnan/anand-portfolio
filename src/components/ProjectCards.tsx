@@ -49,7 +49,7 @@ export default function ProjectCards({
                       ? "rgba(250, 250, 249, 0.25)"
                       : "rgba(0, 0, 0, 0.25)"
                   }
-                  className="h-[350px]"
+                  className="h-[350px] border dark:border-gray-700 border-gray-200 rounded-2xl"
                 >
                   <Link
                     href={clientProject.project_link}

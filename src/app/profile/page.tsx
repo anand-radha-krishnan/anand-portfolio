@@ -14,7 +14,7 @@ export default function Profile() {
       {isFetching ? (
         <ProfileSkeleton />
       ) : (
-        <div className="dark:bg-[url(/profile-image-dark.png)] bg-[url(/profile-image-light.png)] bg-cover bg-no-repeat dark:bg-[top_-300px_left_200px]">
+        <div className="bg-[url(/profile-image-light.png)] bg-contain bg-no-repeat bg-[top_-200px_right_-100px]">
           <div className="mt-12 mb-10 items-center grid grid-cols-4 max-w-xl mx-auto ">
             <div className="text-3xl font-bold col-span-2">Experience</div>
             <CustomDrawer
