@@ -11,7 +11,7 @@ export default function Hero() {
         <div className="text-center">
           <h1 className="font-bold text-6xl">Welcome to the world of Anand</h1>
           <p className="mt-6 text-lg leading-8 ">
-            I am a Full Stack Engineer (Frontend-heavy) with over{" "}
+            I am a Full Stack Engineer (Frontend-focus) with over{" "}
             {experienceInYears}+ years of experience. I enjoy building dynamic,
             creative products and complex applications with cutting-edge
             technologies.
